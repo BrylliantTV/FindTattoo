@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "434753365121",
+    "project_id": "findtattoo-b26b0",
+    "storage_bucket": "findtattoo-b26b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434753365121:android:60003ec320498b86b29980",
+        "android_client_info": {
+          "package_name": "com.ochoa.bryan.findtattoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434753365121-trbvuqctj281f344ule699karj55lh0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0ZZx-0mKSV3SJxjZ_I5gG_NHq8gaL0nk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434753365121-trbvuqctj281f344ule699karj55lh0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
