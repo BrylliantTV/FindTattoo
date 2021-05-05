@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FindTattoo</string>
+    <!-- PARA EL LOGIN DE FACEBOOK-->
+    <string name="facebook_application_id" translatable="false">465415971182421</string>
+    <string name="facebook_login_protocol_schema" translatable="false">fb465415971182421</string>
+    <!-- PARA EL LOGIN DE FACEBOOK-->
 </resources>

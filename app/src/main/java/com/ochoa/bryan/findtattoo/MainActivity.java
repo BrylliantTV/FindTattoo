@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
 
                 if (user != null) {
-                    Toast.makeText(MainActivity.this, "Inicio de sesion OK!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Sesion Iniciada", Toast.LENGTH_SHORT).show();
                 } else {
                     startActivityForResult(AuthUI.getInstance()
                             .createSignInIntentBuilder()
@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 Toast.makeText(MainActivity.this, "Sesión Cerrada", Toast.LENGTH_SHORT).show();
-                finish();
             }
         });
     }

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "434753365121-jinjg592dpcurq55pfbel7k07idum8a5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ochoa.bryan.findtattoo",
+            "certificate_hash": "2778e931010ae4c4a57b52cc30172398edf3acf0"
+          }
+        },
+        {
           "client_id": "434753365121-trbvuqctj281f344ule699karj55lh0n.apps.googleusercontent.com",
           "client_type": 3
         }
