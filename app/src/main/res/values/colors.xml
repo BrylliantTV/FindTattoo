@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="verdePastl">#baffc9</color>
+    <color name="DarkSienna">#4C212A</color>
+    <color name="Google">#db4a39</color>
+    <color name="Facebook">#3b5998</color>
+    <color name="Skobeloff">#00635D</color>
+    <color name="PacificBlue">#3587A4</color>
+    <color name="grey">#737373</color>
 </resources>

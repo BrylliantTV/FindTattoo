@@ -1,7 +1,50 @@
 <resources>
     <string name="app_name">FindTattoo</string>
+    <string name="About">Acerca de...</string>
+    <string name="invalid_mail">Ingrese mail valido</string>
+    <string name="invalid_password">Ingrese una contraseña mayor a 6 digitos</string>
     <!-- PARA EL LOGIN DE FACEBOOK-->
     <string name="facebook_application_id" translatable="false">465415971182421</string>
     <string name="facebook_login_protocol_schema" translatable="false">fb465415971182421</string>
+    <string name="ic_closeSession" />
     <!-- PARA EL LOGIN DE FACEBOOK-->
+    <string name="etEmail">Email</string>
+    <string name="password">Contrañesa</string>
+    <string name="btn_acceder">Acceder</string>
+    <string name="btn_google">Iniciar sesión con Google</string>
+    <string name="btn_facebook">Iniciar sesión con Facebook</string>
+    <string name="btn_register">Registrar</string>
+    <string name="btn_logout">Logout</string>
+    <string name="btn_registerAccount">REGISTRAR CUENTA</string>
+    <string name="btn_Cliente">LOGIN CLIENTE</string>
+    <string name="btn_Socio">LOGIN SOCIO</string>
+    <string name="alert_Login">Rellene todos los campos</string>
+    <string name="alert_loginFailed">Email o contraseña incorrecta</string>
+    <string name="alert_registerSucess">Usuario creado con exito</string>
+    <string name="alert_Sucess">Login OK</string>
+    <string name="alert_loginUser">Inicio de sesión con...</string>
+    <string name="alert_workInProgress">WORK IN PROGRESS...</string>
+    <string name="alert_closeSession">Sesión cerrada</string>
+    <string name="alert_Error_Email_Format">La dirección de correo electrónico está mal formateada.</string>
+    <string name="alert_Error_Email_WrongPassword">La contraseña es incorrecta</string>
+    <string name="alert_Error_Email_EmailAlreadyUsed">La dirección de correo electrónico ya está siendo utilizada por otra cuenta.</string>
+    <string name="ERROR_INVALID_CUSTOM_TOKEN">El formato del token personalizado es incorrecto. Por favor revise la documentación</string>
+    <string name="ERROR_CUSTOM_TOKEN_MISMATCH">El token personalizado corresponde a una audiencia diferente.</string>
+    <string name="ERROR_INVALID_CREDENTIAL">La credencial de autenticación proporcionada tiene un formato incorrecto o ha caducado</string>
+    <string name="ERROR_INVALID_EMAIL">La dirección de correo electrónico está mal formateada.</string>
+    <string name="ERROR_WRONG_PASSWORD">La contraseña no es válida o el usuario no tiene contraseña.</string>
+    <string name="ERROR_USER_MISMATCH">Las credenciales proporcionadas no corresponden al usuario que inició sesión anteriormente.</string>
+    <string name="ERROR_REQUIRES_RECENT_LOGIN">Esta operación es sensible y requiere autenticación reciente. Inicie sesión nuevamente antes de volver a intentar esta solicitud.</string>
+    <string name="ERROR_ACCOUNT_EXISTS_WITH_DIFFERENT_CREDENTIAL">Ya existe una cuenta con la misma dirección de correo electrónico pero diferentes credenciales de inicio de sesión. Inicie sesión con un proveedor asociado a esta dirección de correo electrónico.</string>
+    <string name="ERROR_EMAIL_ALREADY_IN_USE">La dirección de correo electrónico ya está siendo utilizada por otra cuenta.</string>
+    <string name="ERROR_CREDENTIAL_ALREADY_IN_USE">Esta credencial ya está asociada con una cuenta de usuario diferente.</string>
+    <string name="ERROR_USER_DISABLED">La cuenta de usuario ha sido inhabilitada por un administrador.</string>
+    <string name="ERROR_USER_TOKEN_EXPIRED">La credencial del usuario ya no es válida. El usuario debe iniciar sesión nuevamente.</string>
+    <string name="ERROR_USER_NOT_FOUND">No hay ningún registro de usuario que corresponda a este identificador. Es posible que se haya eliminado al usuario.</string>
+    <string name="ERROR_INVALID_USER_TOKEN">La credencial del usuario ya no es válida. El usuario debe iniciar sesión nuevamente.</string>
+    <string name="ERROR_OPERATION_NOT_ALLOWED">Esta operación no está permitida. Debes habilitar este servicio en la consola.</string>
+    <string name="ERROR_WEAK_PASSWORD">La contraseña proporcionada no es válida.</string>
+    <string name="ERROR_WEAK_PASSWORD_ALERT">La contraseña no es válida, debe tener al menos 6 caracteres</string>
+
+
 </resources>
