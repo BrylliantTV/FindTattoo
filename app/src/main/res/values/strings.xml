@@ -16,8 +16,8 @@
     <string name="btn_register">Registrar</string>
     <string name="btn_logout">Logout</string>
     <string name="btn_registerAccount">REGISTRAR CUENTA</string>
-    <string name="btn_Cliente">LOGIN CLIENTE</string>
-    <string name="btn_Socio">LOGIN SOCIO</string>
+    <string name="btn_Cliente">Join as a customer</string>
+    <string name="btn_Socio">Join as Artist or Studio</string>
     <string name="alert_Login">Rellene todos los campos</string>
     <string name="alert_loginFailed">Email o contraseña incorrecta</string>
     <string name="alert_registerSucess">Usuario creado con exito</string>
@@ -45,6 +45,8 @@
     <string name="ERROR_OPERATION_NOT_ALLOWED">Esta operación no está permitida. Debes habilitar este servicio en la consola.</string>
     <string name="ERROR_WEAK_PASSWORD">La contraseña proporcionada no es válida.</string>
     <string name="ERROR_WEAK_PASSWORD_ALERT">La contraseña no es válida, debe tener al menos 6 caracteres</string>
+    <string name="btn_Cancel">Cancelar</string>
+    <string name="close_Session">Cerrar sesión...</string>
 
 
 </resources>

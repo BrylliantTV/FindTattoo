@@ -73,7 +73,7 @@ public class AuthActivity extends AppCompatActivity {
         });
 
         //
-        binding.SignUpbutton.setOnClickListener(new View.OnClickListener() {
+        binding.gmailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(AuthActivity.this, RegisterActivity.class);

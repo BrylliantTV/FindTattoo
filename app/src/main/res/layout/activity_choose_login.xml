@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image_10"
+    android:background="@drawable/background_app2"
     tools:context=".ChooseLoginActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,21 +23,25 @@
             android:id="@+id/clientButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/Google"
-            android:text="@string/btn_Cliente"
+            android:background="@drawable/custom_button"
             android:onClick="loginClient"
-            android:textColor="@color/white" />
+            android:text="@string/btn_Cliente"
+            android:textAllCaps="false"
+            android:textColor="@color/Orange_app" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            android:layout_height="16dp" />
 
         <Button
             android:id="@+id/partnerButton"
-            android:onClick="loginPartner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/Facebook"
-            android:text="@string/btn_Socio" />
+            android:background="@drawable/custom_button"
+            android:onClick="loginPartner"
+            android:text="@string/btn_Socio"
+            android:textAllCaps="false"
+            android:textColor="@color/Orange_app" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

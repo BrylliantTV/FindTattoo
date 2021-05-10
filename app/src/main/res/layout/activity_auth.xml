@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background_image_10"
+    android:background="@drawable/background_app2"
     android:layout_height="match_parent"
 
     tools:context=".AuthActivity">
@@ -22,22 +22,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Orange_app"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="INICIAR SESIÓN" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:background="@drawable/custom_button_2"
+            android:textColorHint="@color/Orange_app">
 
             <EditText
                 android:id="@+id/editTextTextEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:backgroundTint="@color/Orange_app"
                 android:ems="10"
                 android:hint="@string/etEmail"
                 android:inputType="textEmailAddress"
-                />
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
 
         <Space
@@ -47,52 +64,44 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/custom_button_2"
             android:hint="@string/password"
+            android:textColorHint="@color/Orange_app"
             app:endIconMode="password_toggle"
-            app:endIconTint="@color/white"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            app:endIconTint="@color/white">
 
 
             <EditText
                 android:id="@+id/editTextTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/Orange_app"
                 android:ems="10"
+                android:inputType="textPassword"
                 android:textColor="@color/white"
-                android:inputType="textPassword" />
+                android:textColorHint="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            android:layout_height="16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/SignUpbutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@color/PacificBlue"
-                android:text="@string/btn_register" />
 
-            <Space
-                android:layout_width="8dp"
-                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/Loginbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-
-                android:backgroundTint="@color/Skobeloff"
-                android:text="@string/btn_acceder" />
+                android:background="@drawable/custom_button_3"
+                android:text="@string/btn_acceder"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -102,15 +111,26 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="8dp" />
+                android:layout_height="100dp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Orange_app"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="REGÍSTRATE"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
             <Button
                 android:id="@+id/Googlebutton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/Google"
-                android:textColor="@color/white"
-                android:text="@string/btn_google" />
+                android:backgroundTint="@color/white"
+                android:text="@string/btn_google"
+                android:textColor="@color/black_app" />
 
             <Space
                 android:layout_width="match_parent"
@@ -119,10 +139,23 @@
             <Button
                 android:id="@+id/Facebookbutton"
                 android:layout_width="match_parent"
-                android:onClick="loginFacebook"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/Facebook"
-                android:text="@string/btn_facebook" />
+                android:onClick="loginFacebook"
+                android:text="@string/btn_facebook"
+                android:textColor="@color/white" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <Button
+                android:id="@+id/gmailButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Google"
+                android:onClick="loginFacebook"
+                android:text="Registrarse con Email"
+                android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,14 @@
 package com.ochoa.bryan.findtattoo;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -29,7 +33,7 @@ public class ProfileActivity extends AppCompatActivity {
         // init firebase auth
         firebaseAuth = FirebaseAuth.getInstance();
         checkUser();
-    }
+    } // END OF ONCREATE
 
     private void checkUser() {
         //get current user
@@ -42,7 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
             //get user info
             String email = firebaseUser.getEmail();
             //set email
-            binding.emailTv.setText(email);
+            //binding.emailTv.setText(email);
         }
     }
 
@@ -51,5 +55,29 @@ public class ProfileActivity extends AppCompatActivity {
         firebaseAuth.getInstance().signOut();
         Toast.makeText(ProfileActivity.this, R.string.alert_closeSession, Toast.LENGTH_SHORT).show();
         checkUser();
+    }
+    public void cerrarSesion2(){
+        //firebaseAuth.signOut();
+        firebaseAuth.getInstance().signOut();
+        Toast.makeText(ProfileActivity.this, R.string.alert_closeSession, Toast.LENGTH_SHORT).show();
+        checkUser();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //MenuInflater inflater = getMenuInflater();
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_CloseSession:
+                cerrarSesion2();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
