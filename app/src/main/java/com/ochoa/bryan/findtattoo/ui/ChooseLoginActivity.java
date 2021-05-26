@@ -1,4 +1,4 @@
-package com.ochoa.bryan.findtattoo;
+package com.ochoa.bryan.findtattoo.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.ochoa.bryan.findtattoo.R;
 
 public class ChooseLoginActivity extends AppCompatActivity {
 

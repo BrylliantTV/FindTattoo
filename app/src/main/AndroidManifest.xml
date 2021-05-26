@@ -15,10 +15,11 @@
         android:theme="@style/Theme.FindTattoo"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".ChooseLoginActivity"></activity>
+        <activity android:name=".TatuadorActivity" />
+        <activity android:name=".ui.ChooseLoginActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".AuthActivity" />
+        <activity android:name=".ui.AuthActivity" />
         <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

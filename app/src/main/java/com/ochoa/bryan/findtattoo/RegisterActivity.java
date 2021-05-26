@@ -8,21 +8,17 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
-import com.ochoa.bryan.findtattoo.databinding.ActivityAuthBinding;
 import com.ochoa.bryan.findtattoo.databinding.ActivityRegisterBinding;
-import com.ochoa.bryan.findtattoo.ui.MainActivity;
+import com.ochoa.bryan.findtattoo.ui.AuthActivity;
 
 public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;

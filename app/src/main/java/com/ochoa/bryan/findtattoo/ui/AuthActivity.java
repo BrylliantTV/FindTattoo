@@ -1,4 +1,4 @@
-package com.ochoa.bryan.findtattoo;
+package com.ochoa.bryan.findtattoo.ui;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,10 +9,9 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -24,14 +23,16 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GoogleAuthCredential;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.ochoa.bryan.findtattoo.ProfileActivity;
+import com.ochoa.bryan.findtattoo.R;
+import com.ochoa.bryan.findtattoo.RegisterActivity;
 import com.ochoa.bryan.findtattoo.databinding.ActivityAuthBinding;
-import com.ochoa.bryan.findtattoo.databinding.ActivityMainBinding;
-import com.ochoa.bryan.findtattoo.databinding.ActivityProfileBinding;
-import com.ochoa.bryan.findtattoo.ui.MainActivity;
+
+import org.jetbrains.annotations.NotNull;
 
 public class AuthActivity extends AppCompatActivity {
     //init firebase auth
@@ -61,6 +62,7 @@ public class AuthActivity extends AppCompatActivity {
 
         //init firebase auth
         checkUser();
+
         //Google SignInButton: Click to begin Google SignIn
         binding.Googlebutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,8 +73,9 @@ public class AuthActivity extends AppCompatActivity {
                 startActivityForResult(intent, RC_SIGN_IN);
             }
         });
-
-        //
+        /**
+         * Boton de de registro de Gmail
+         */
         binding.gmailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +83,9 @@ public class AuthActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        /**
+         * boton de Login de Gmail
+         */
         binding.Loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,8 +98,11 @@ public class AuthActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                FirebaseUser firebaseUser = auth.getCurrentUser();
+                                //get user info
+                                String email = firebaseUser.getEmail();
                                 Log.d(TAG, String.valueOf(R.string.alert_Sucess));
-                                Toast.makeText(AuthActivity.this, R.string.alert_Sucess, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AuthActivity.this, "Logged with: " + email, Toast.LENGTH_SHORT).show();
                                 FirebaseUser user = auth.getCurrentUser();
                                 Intent i = new Intent(AuthActivity.this, ProfileActivity.class);
                                 startActivity(i);
@@ -110,6 +119,10 @@ public class AuthActivity extends AppCompatActivity {
         });
 
     }  // END OF ONCREATE
+
+    /**
+     * con el metodo checkUser comprobamos que user esta intentando logear y si existe en nuestra bd de firebase, lo enviamos a la actividad pertinente.
+     */
 
     private void checkUser() {
         // if user is already signed in then go to profile activity
@@ -141,7 +154,9 @@ public class AuthActivity extends AppCompatActivity {
         }
     }
 
-    //private void firebaseAuthWithGoogleAccount(GoogleSignInAccount account) {
+    /**
+     * @param account
+     */
     private void firebaseAuthWithGoogleAccount(String account) {
         Log.d(TAG, "firebaseAuthGoogleAccount: begin firebase auth with google account");
         AuthCredential credential = GoogleAuthProvider.getCredential(account, null);
@@ -166,7 +181,7 @@ public class AuthActivity extends AppCompatActivity {
                             Toast.makeText(AuthActivity.this, "Account Created...\n" + email, Toast.LENGTH_SHORT).show();
                         } else {
                             Log.d(TAG, "onSucess: Existing user...\n" + email);
-                            Toast.makeText(AuthActivity.this, "Inicio de sesión con: " + email, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AuthActivity.this, "Logged with: " + email, Toast.LENGTH_SHORT).show();
                         }
                         //start profile activity
                         startActivity(new Intent(AuthActivity.this, ProfileActivity.class));

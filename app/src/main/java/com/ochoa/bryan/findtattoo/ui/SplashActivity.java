@@ -6,10 +6,8 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
-import com.google.android.gms.auth.api.Auth;
-import com.ochoa.bryan.findtattoo.AuthActivity;
-import com.ochoa.bryan.findtattoo.ChooseLoginActivity;
 import com.ochoa.bryan.findtattoo.R;
+
 
 public class SplashActivity extends AppCompatActivity {
 
