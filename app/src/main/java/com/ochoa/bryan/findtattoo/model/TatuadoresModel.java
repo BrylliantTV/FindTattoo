@@ -21,11 +21,15 @@ public class TatuadoresModel implements Serializable {
     String estilo1;
     String estilo2;
     String estilo3;
+    String image1;
+    String image2;
+    String image3;
+    String image4;
 
     public TatuadoresModel() {
     }
 
-    public TatuadoresModel(String id, String ciudad, String descripcion, String direccion, String estudio, String instagram, GeoPoint localizacion, String nombre, String telefono, String url, String estilo1, String estilo2, String estilo3) {
+    public TatuadoresModel(String id, String ciudad, String descripcion, String direccion, String estudio, String instagram, GeoPoint localizacion, String nombre, String telefono, String url, String estilo1, String estilo2, String estilo3, String image1, String image2, String image3, String image4) {
         this.id = id;
         this.ciudad = ciudad;
         this.descripcion = descripcion;
@@ -39,6 +43,10 @@ public class TatuadoresModel implements Serializable {
         this.estilo1 = estilo1;
         this.estilo2 = estilo2;
         this.estilo3 = estilo3;
+        this.image1 = image1;
+        this.image2 = image2;
+        this.image3 = image3;
+        this.image4 = image4;
     }
 
     public String getId() {
@@ -143,5 +151,37 @@ public class TatuadoresModel implements Serializable {
 
     public void setEstilo3(String estilo3) {
         this.estilo3 = estilo3;
+    }
+
+    public String getImage1() {
+        return image1;
+    }
+
+    public void setImage1(String image1) {
+        this.image1 = image1;
+    }
+
+    public String getImage2() {
+        return image2;
+    }
+
+    public void setImage2(String image2) {
+        this.image2 = image2;
+    }
+
+    public String getImage3() {
+        return image3;
+    }
+
+    public void setImage3(String image3) {
+        this.image3 = image3;
+    }
+
+    public String getImage4() {
+        return image4;
+    }
+
+    public void setImage4(String image4) {
+        this.image4 = image4;
     }
 }

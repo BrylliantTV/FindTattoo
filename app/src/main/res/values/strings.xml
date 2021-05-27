@@ -47,7 +47,7 @@
     <string name="ERROR_WEAK_PASSWORD_ALERT">La contraseña no es válida, debe tener al menos 6 caracteres</string>
     <string name="btn_Cancel">Cancelar</string>
     <string name="close_Session">Cerrar sesión...</string>
-    <string name="lore">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="lore">Descripcion del tatuador</string>
     <string name="name_tatuador">Tatuador Name</string>
     <string name="city_name">Tatuador city</string>
     <string name="tatuador_dir">direccion</string>
