@@ -38,14 +38,12 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        // init firebase auth
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         mFirestoreList = findViewById(R.id.rvTatuadores);
         mFirestoreList.setLayoutManager(new LinearLayoutManager(this));
         searchView = findViewById(R.id.search);
 
-       //Query
         Query query = FirebaseFirestore.getInstance().collection("Tatuadores");
         FirestoreRecyclerOptions<TatuadoresModel> options = new FirestoreRecyclerOptions.Builder<TatuadoresModel>()
                 .setQuery(query, TatuadoresModel.class)
@@ -118,13 +116,10 @@ public class ProfileActivity extends AppCompatActivity {
      * con el metodo checkUser comprobamos que user esta actualmente logeado.
      */
     private void checkUser() {
-        //get current user
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if (firebaseUser == null) {
             startActivity(new Intent(this, AuthActivity.class));
         } else {
-            //user logged in
-            //get user info
             String email = firebaseUser.getEmail();
             //set email
             //binding.emailTv.setText(email);
@@ -157,5 +152,16 @@ public class ProfileActivity extends AppCompatActivity {
         tatuadorAdapter = new TatuadorAdapter(options);
         tatuadorAdapter.startListening();
         mFirestoreList.setAdapter(tatuadorAdapter);
+        tatuadorAdapter.setOnItemClickListener(new TatuadorAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
+                TatuadoresModel tatuadoresModel = documentSnapshot.toObject(TatuadoresModel.class);
+                String id = documentSnapshot.getId();
+                Intent i = new Intent(ProfileActivity.this, TatuadorActivity.class);
+                i.putExtra("IDTATUADOR", id);
+                startActivity(i);
+
+            }
+        });
     }
 }
