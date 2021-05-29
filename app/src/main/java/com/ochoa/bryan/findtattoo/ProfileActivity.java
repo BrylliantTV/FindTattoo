@@ -22,6 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.ochoa.bryan.findtattoo.adapters.TatuadorAdapter;
 import com.ochoa.bryan.findtattoo.model.TatuadoresModel;
+import com.ochoa.bryan.findtattoo.ui.AboutActivity;
 import com.ochoa.bryan.findtattoo.ui.AuthActivity;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -82,7 +83,7 @@ public class ProfileActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
         MenuItem item = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView)item.getActionView();
+        SearchView searchView = (SearchView) item.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -106,6 +107,9 @@ public class ProfileActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_CloseSession:
                 btnCloseSession();
+                return true;
+            case R.id.action_About:
+                btnAbout();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -138,14 +142,16 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
+    public void btnAbout() {
+        startActivity(new Intent(this, AboutActivity.class));
+    }
+
     /**
-     *
-     * @param str
-     * con el me searchCity buscamos por el recycler view y la bd que tenemos en firestore los
-     * items que contienen el Str(ciudad) que buscamos
+     * @param str con el me searchCity buscamos por el recycler view y la bd que tenemos en firestore los
+     *            items que contienen el Str(ciudad) que buscamos
      */
     private void searchCity(String str) {
-        Query query = FirebaseFirestore.getInstance().collection("Tatuadores").orderBy("ciudad").startAt(str).endAt(str+"~");
+        Query query = FirebaseFirestore.getInstance().collection("Tatuadores").orderBy("ciudad").startAt(str).endAt(str + "~");
         FirestoreRecyclerOptions<TatuadoresModel> options = new FirestoreRecyclerOptions.Builder<TatuadoresModel>()
                 .setQuery(query, TatuadoresModel.class)
                 .build();

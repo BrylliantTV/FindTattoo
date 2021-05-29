@@ -56,6 +56,10 @@
     <string name="Title_Register">REGÍSTRATE</string>
     <string name="btn_registerAuth">Registrarse con Email</string>
     <string name="style">Estilo</string>
+    <string name="Version">Version: 1.0</string>
+    <string name="nameDev">Bryan Daza Fernández</string>
+    <string name="nameSchool">Proyecto de fin de grado IES Severo Ochoa</string>
+    <string name="tvYear">2019-2021</string>
 
 
 </resources>

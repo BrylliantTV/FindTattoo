@@ -15,6 +15,7 @@
         android:theme="@style/Theme.FindTattoo"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+        <activity android:name=".ui.AboutActivity"></activity>
         <activity android:name=".TatuadorActivity" />
         <activity android:name=".ui.ChooseLoginActivity" />
         <activity android:name=".ProfileActivity" />
