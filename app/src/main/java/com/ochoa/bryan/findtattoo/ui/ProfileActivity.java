@@ -1,4 +1,4 @@
-package com.ochoa.bryan.findtattoo;
+package com.ochoa.bryan.findtattoo.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,10 +20,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.ochoa.bryan.findtattoo.R;
 import com.ochoa.bryan.findtattoo.adapters.TatuadorAdapter;
 import com.ochoa.bryan.findtattoo.model.TatuadoresModel;
-import com.ochoa.bryan.findtattoo.ui.AboutActivity;
-import com.ochoa.bryan.findtattoo.ui.AuthActivity;
 
 public class ProfileActivity extends AppCompatActivity {
 

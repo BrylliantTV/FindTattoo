@@ -7,9 +7,11 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 
-import com.ochoa.bryan.findtattoo.ProfileActivity;
 import com.ochoa.bryan.findtattoo.databinding.ActivityAboutBinding;
 
+/**
+ * ACTIVIDAD DE LA INFORMACIÓN DE LA APLICACIÓN
+ */
 public class AboutActivity extends AppCompatActivity {
 
     private ActivityAboutBinding binding;
@@ -22,6 +24,11 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
     }
 
+    /**
+     *
+     * @param view
+     * Boton que nos envia a la actividad anterior.
+     */
     public void btnBack(View view) {
         Intent i = new Intent(this, ProfileActivity.class);
         startActivity(i);

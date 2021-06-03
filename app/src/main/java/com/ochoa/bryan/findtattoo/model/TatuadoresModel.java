@@ -6,6 +6,9 @@ import com.google.firebase.firestore.GeoPoint;
 
 import java.io.Serializable;
 
+/**
+ * CLASE MODELO DE TATUADORES
+ */
 public class TatuadoresModel implements Serializable {
 
     String id;

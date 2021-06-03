@@ -1,4 +1,4 @@
-package com.ochoa.bryan.findtattoo;
+package com.ochoa.bryan.findtattoo.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,13 +10,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.GeoPoint;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.ochoa.bryan.findtattoo.R;
 import com.ochoa.bryan.findtattoo.databinding.ActivityTatuadorBinding;
 
 import org.jetbrains.annotations.NotNull;
@@ -88,8 +88,23 @@ public class TatuadorActivity extends AppCompatActivity {
                                         startActivity(intent);
                                     }
                                 });
-
+                                binding.ivPhone.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        String tel = documentSnapshot.get("telefono").toString();
+                                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel: " + tel));
+                                        startActivity(intent);
+                                    }
+                                });
                                 binding.tvDireccion.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        GeoPoint docuGeo = documentSnapshot.getGeoPoint("localizacion");
+                                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo: " + docuGeo.getLatitude() + ", " + docuGeo.getLongitude()));
+                                        startActivity(intent);
+                                    }
+                                });
+                                binding.ivLocation.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         GeoPoint docuGeo = documentSnapshot.getGeoPoint("localizacion");
@@ -117,5 +132,5 @@ public class TatuadorActivity extends AppCompatActivity {
                         }
                     }
                 });
-    }
+    }// EN ONCREATE
 }

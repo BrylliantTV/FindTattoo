@@ -8,7 +8,9 @@ import android.os.Bundle;
 
 import com.ochoa.bryan.findtattoo.R;
 
-
+/**
+ * ACTIVIDAD DE LA IMAGEN INICIAL DE LA APLICACIÓN
+ */
 public class SplashActivity extends AppCompatActivity {
 
     @Override

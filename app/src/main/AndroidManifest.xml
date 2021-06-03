@@ -16,10 +16,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity android:name=".ui.AboutActivity"></activity>
-        <activity android:name=".TatuadorActivity" />
+        <activity android:name=".ui.TatuadorActivity" />
         <activity android:name=".ui.ChooseLoginActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ui.ProfileActivity" />
+        <activity android:name=".ui.RegisterActivity" />
         <activity android:name=".ui.AuthActivity" />
         <activity android:name=".ui.SplashActivity">
             <intent-filter>

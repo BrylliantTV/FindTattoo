@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_app2"
-    tools:context=".TatuadorActivity">
+    tools:context=".ui.TatuadorActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivTatuador"
@@ -146,20 +146,20 @@
 
     <ImageView
         android:id="@+id/ivLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="14dp"
+        android:layout_width="25dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintStart_toEndOf="@+id/tvCity"
         app:layout_constraintTop_toBottomOf="@+id/ivInstagram"
         app:srcCompat="@android:drawable/ic_dialog_map" />
 
     <ImageView
         android:id="@+id/ivPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="7dp"
         app:layout_constraintStart_toEndOf="@+id/tvTelefono"
         app:layout_constraintTop_toBottomOf="@+id/tvNombre"
         app:srcCompat="@android:drawable/stat_sys_phone_call" />

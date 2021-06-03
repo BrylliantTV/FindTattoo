@@ -1,4 +1,4 @@
-package com.ochoa.bryan.findtattoo;
+package com.ochoa.bryan.findtattoo.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,9 +17,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
+import com.ochoa.bryan.findtattoo.R;
 import com.ochoa.bryan.findtattoo.databinding.ActivityRegisterBinding;
-import com.ochoa.bryan.findtattoo.ui.AuthActivity;
 
+/**
+ * ACTIVIDAD DE REGISTRO DE LA APLICACIÓN
+ */
 public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private AwesomeValidation awesomeValidation;
@@ -66,6 +69,12 @@ public class RegisterActivity extends AppCompatActivity {
         });
     } // END OF ONCREATE
 
+    /**
+     *
+     * @param error
+     * Con este metodo tenemos un switch con el que controlamos los fallos que queremos que ocurran en caso de
+     * introducir algun dato mal a la hora del registro, como pueda ser una contraseña demasiado pequeña o un correo invalido
+     */
     private void ToastErrorCode(String error) {
 
         switch (error) {
